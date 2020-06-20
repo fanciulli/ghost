@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "ghost-de5c"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "ghost-de5c"
+    spec:
+      containers:
+        - name: "ghost-de5c"
+          image: "ghostregistry.azurecr.io/ghost"
+          ports:
+          - containerPort: 2368
